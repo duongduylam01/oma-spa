@@ -1,8 +1,20 @@
 
-.container {
-  border: 1px solid red;
-  h1 {
-    //font-family: "UTM Avo Bold", sans-serif;
-    font-size: 32px; font-weight: 700; text-transform: uppercase;
+$height-header: 120px;
+
+.main {
+  min-height: 1500px;
+  background: url("https://img.freepik.com/free-vector/ornamental-vintage-floral-background_23-2148331600.jpg?w=2000");
+  background-repeat: no-repeat; background-size: contain;
+  &-header {
+    .header-menu {
+      border: 1px solid blue; background: transparent;
+      width: 100%; height: $height-header; position: fixed;
+      &-frame { height: $height-header; }
+    }
+  }
+  &-body {
+    .container {
+      border: 1px solid red;
+    }
   }
 }
