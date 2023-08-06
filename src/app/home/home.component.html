@@ -1,9 +1,40 @@
 <div class="main">
   <div class="main-header">
-    <div class="header-menu">Header</div>
-    <div class="header-menu-frame">Header-frame</div>
+    <div class="header-menu">
+      <div class="container">
+        <div class="container-header">
+          <img class="header-logo" srcset="{{headerLogo}}" alt="">
+          <ul class="header-list">
+            <li *ngFor="let item of headerMenuList; index as i"
+                [class.header-item-active]="item.isActive"
+                (click)="onSelect(selectCase.HEADER_MENU, i)"
+              class="header-item">{{item.name}}</li>
+          </ul>
+          <div class="dropdown">
+<!--            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ngon ngu</button>-->
+<!--            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
+<!--              <a class="dropdown-item" href="#">Action</a>-->
+<!--              <a class="dropdown-item" href="#">Another action</a>-->
+<!--              <a class="dropdown-item" href="#">Something else here</a>-->
+<!--            </div>-->
+
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01"><img srcset="assets/img/vn-flag-1.png 2x" alt=""></label>
+              </div>
+              <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Tiếng việt</option>
+                <option value="1">English</option>
+
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="main-body">
+    <div class="main-body-frame">main-bod</div>
     <div class="container">
       <div class="row">
         <div class="col-lg-6"><i class="fa fa-search"></i></div>
