@@ -8,24 +8,17 @@
             <li *ngFor="let item of headerMenuList; index as i"
                 [class.header-item-active]="item.isActive"
                 (click)="onSelect(selectCase.HEADER_MENU, i)"
-              class="header-item">{{item.name}}</li>
+                class="header-item">{{item.name}}</li>
           </ul>
           <div class="dropdown">
-<!--            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ngon ngu</button>-->
-<!--            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
-<!--              <a class="dropdown-item" href="#">Action</a>-->
-<!--              <a class="dropdown-item" href="#">Another action</a>-->
-<!--              <a class="dropdown-item" href="#">Something else here</a>-->
-<!--            </div>-->
-
             <div class="input-group">
               <div class="input-group-prepend">
-                <label class="input-group-text" for="inputGroupSelect01"><img srcset="assets/img/vn-flag-1.png 2x" alt=""></label>
+                <label class="input-group-text" for="inputGroupSelect01">
+                  <img srcset="assets/img/vn-flag-1.png 2x" alt=""></label>
               </div>
               <select class="custom-select" id="inputGroupSelect01">
                 <option selected>Tiếng việt</option>
                 <option value="1">English</option>
-
               </select>
             </div>
           </div>
@@ -33,22 +26,16 @@
       </div>
     </div>
   </div>
-  <div class="main-body">
-    <div class="main-body-frame">main-bod</div>
+  <div class="main-banner" [style.background-image]="'url(' + bannerLink + ')'">
+    <div class="main-banner-frame"></div>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6"><i class="fa fa-search"></i></div>
-        <div class="col-lg-6" style="background: lightcoral"><p>b</p></div>
-        <div class="col-lg-6">
-          <h1 class="test">Our service</h1>
-          <p>Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in
-            ấn. Lorem Ipsum đã được sử dụng như một văn bản chuẩn cho ngành công</p>
-        </div>
-        <div class="col-lg-6">
-          <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aut blanditiis cumque
-            ducimus expedita, explicabo, harum molestiae quae recusandae tempora voluptatem voluptatum? Architecto
-            consequuntur cumque dicta fuga in inventore, labore?</p>
-        </div>
+      <div class="col-lg-6 banner-desc">
+        <h1>Khám phá thanh bình tại</h1>
+        <h2>SPA OMA</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis consequuntur, modi mollitia non
+          quisquam sunt vitae? Aliquid aspernatur ducimus explicabo ipsum mollitia omnis pariatur reiciendis similique,
+          temporibus vero vitae?</p>
+        <button class="btn btn-primary btn-book"><i class="fa fa-calendar ico-book"></i>Đặt lịch ngay</button>
       </div>
     </div>
   </div>

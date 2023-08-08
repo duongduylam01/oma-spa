@@ -1,14 +1,26 @@
 
 $height-header: 120px;
 $color-1: #825F4D;
+$color-2: #BD9E08;
+$color-3: #825F4D;
+$color-4: #694b3c;
+
+button.btn-book {
+  height: 56px; padding: 0 25px; border-radius: 5px;
+  background: $color-3; border: none;
+  text-transform: uppercase; font-weight: bolder;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  &:active { background: $color-4; }
+  i.ico-book { margin-right: 20px; font-size: 20px; }
+}
 
 .main {
   min-height: 1500px;
-  background: url("https://img.freepik.com/free-vector/ornamental-vintage-floral-background_23-2148331600.jpg?w=2000");
-  background-repeat: no-repeat; background-size: cover;
+  //background: url("https://img.freepik.com/free-vector/ornamental-vintage-floral-background_23-2148331600.jpg?w=2000");
+  //background-repeat: no-repeat; background-size: cover;
   &-header {
     .header-menu {
-      border: 1px solid blue; background: #fff;
+      //border: 1px solid blue; background: #fff;
       width: 100%; height: $height-header; position: fixed;
       .container {
         &-header {
@@ -23,7 +35,8 @@ $color-1: #825F4D;
               font-size: 14px; padding: 8px 0; cursor: pointer;
               //a { text-decoration: none; color: unset; }
             }
-            li:hover, li.header-item-active {
+            //li:hover,
+            li.header-item-active {
               font-weight: bolder; color: $color-1; position: relative;
               &:before{
                 content: ""; position: absolute;
@@ -37,18 +50,29 @@ $color-1: #825F4D;
             display: flex; align-items: center;
             label { border: none; background-color: unset; }
             select {
-              border: none; font-size: 14px;
-              option { padding: 10px; }
+              border: none; font-size: 14px; background: transparent;
+              //option { padding: 10px; }
             }
           }
         }
       }
     }
   }
-  &-body {
+  &-banner {
+    min-height: 1080px;
+    background-size: cover; background-repeat: no-repeat;
+    //display: flex; align-items: center;
     &-frame { height: $height-header; }
     .container {
-      border: 1px solid red;
+      //border: 1px solid red;
+      //height: 100%;
+      .banner-desc {
+        margin-top: 200px;
+        h1 { font-size: 44px; font-weight: 700; text-transform: uppercase; margin: 5px 0; }
+        h2 { font-size: 56px; font-weight: 700; text-transform: uppercase; color: $color-2; margin: 5px 0; }
+        p { margin: 5px 0; }
+        button.btn-book { margin-top: 40px}
+      }
     }
   }
 }

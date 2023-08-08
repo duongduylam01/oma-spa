@@ -26,6 +26,8 @@ export class HomeComponent implements OnInit {
     {name: 'English', icon: 'assets/img/vn-flag-1.png'}
   ];
 
+  bannerLink: string = 'https://img.freepik.com/free-vector/ornamental-vintage-floral-background_23-2148331600.jpg?w=2000';
+
   ngOnInit(): void {
 
   }
